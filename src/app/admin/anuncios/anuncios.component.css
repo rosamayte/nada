@@ -2,6 +2,12 @@
   min-width: 300px;
 }
 
+.myimg {
+  max-height: 150px;
+  max-width: 150px;
+  cursor: pointer;
+}
+
 .info {
   height: 500px;
   min-width: 100%;
