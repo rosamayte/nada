@@ -13,6 +13,13 @@ import { RegistroComponent } from './registro/registro.component';
 import { CarrerasComponent } from './admin/carreras/carreras.component';
 import { AnunciosComponent } from './admin/anuncios/anuncios.component';
 import { JefesComponent } from './admin/jefes/jefes.component';
+import { EstudianteComponent } from './registro/estudiante/estudiante.component';
+import { EmpresaComponent } from './registro/empresa/empresa.component';
+import { PendientesComponent } from './pendientes/pendientes.component';
+import { VisualizacionComponent } from './visualizacion/visualizacion.component';
+import { EmpresasComponent } from './pendientes/empresas/empresas.component';
+import { PasantesComponent } from './visualizacion/pasantes/pasantes.component';
+import { PasantiasComponent } from './visualizacion/pasantias/pasantias.component';
 
 @NgModule({
   declarations: [
@@ -23,7 +30,14 @@ import { JefesComponent } from './admin/jefes/jefes.component';
     RegistroComponent,
     CarrerasComponent,
     AnunciosComponent,
-    JefesComponent
+    JefesComponent,
+    EstudianteComponent,
+    EmpresaComponent,
+    PendientesComponent,
+    VisualizacionComponent,
+    EmpresasComponent,
+    PasantesComponent,
+    PasantiasComponent
   ],
   imports: [
     BrowserModule,

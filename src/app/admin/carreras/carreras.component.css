@@ -37,3 +37,11 @@
   padding-left: 5%;
   /* margin-left: 10%; */
 }
+
+.list-group-item {
+  background: transparent;
+}
+
+.check {
+  cursor: pointer;
+}

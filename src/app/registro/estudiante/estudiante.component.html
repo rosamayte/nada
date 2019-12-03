@@ -1,0 +1,51 @@
+<div class="container p-5">
+  <h2 class="pb-4">
+    Registro de Estudiante
+  </h2>
+  <form class="needs-validation" [formGroup]="formEstudiante" novalidate>
+    <div class="form-row">
+      <div class="form-group col-md-6">
+        <label for="inputEmail4">Nombre</label>
+        <input type="text" class="form-control" id="nombre" formControlName="nombre" required>
+      </div>
+      <div class="form-group col-md-6">
+        <label for="inputPassword4">Contraseña</label>
+        <input type="password" class="form-control" id="password" formControlName="password" required>
+      </div>
+    </div>
+    <div class="form-row">
+      <div class="form-group col-md-4">
+        <label for="code">Código</label>
+        <input type="number" class="form-control" id="codigo" formControlName="codigo" required>
+      </div>
+      <div class="form-group col-md-8">
+        <label for="carrera">Carrera</label>
+        <select id="carrera" class="form-control" formControlName="carrera" required>
+          <option selected disabled value="">Choose...</option>
+          <option>...</option>
+        </select>
+      </div>
+    </div>
+    <div class="form-row">
+      <div class="form-group col-md-6">
+        <label for="email">Correo</label>
+        <input type="email" class="form-control" id="email" formControlName="correo" required>
+      </div>
+      <div class="form-group col-md-6">
+        <label for="pagina">Página Web</label>
+        <input type="text" class="form-control" id="pagina" formControlName="pagina">
+      </div>
+    </div>
+    <div class="form-row">
+      <div class="form-group col-md-12">
+        <label for="informacion">Información General</label>
+        <textarea class="form-control" id="informacion" rows="3" formControlName="informacion" required></textarea>
+      </div>
+    </div>
+    <div class="form-row">
+      <div class="col-md-10"></div>
+      <button type="submit" class="btn btn-warning col-md-2">Registrar</button>
+      <!-- <div class="col-md-1"></div> -->
+    </div>
+  </form>
+</div>
