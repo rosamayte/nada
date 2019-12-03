@@ -2,27 +2,41 @@
   <div class="d-flex justify-content-center h-100">
     <div class="card">
       <div class="card-header">
-        <h3>Sign In</h3>
+        <h3>Ingresar</h3>
       </div>
       <div class="card-body">
-        <form name="loginForm" [formGroup]="loginForm">
-          <div class="input-group form-group">
+        <!-- <form name="loginForm" [formGroup]="loginForm"> -->
+          <!-- <div class="input-group form-group">
             <div class="input-group-prepend">
               <span class="input-group-text"><i class="fas fa-user"></i></span>
             </div>
             <input type="text" class="form-control" formControlName="nombre">
-
           </div>
           <div class="input-group form-group">
             <div class="input-group-prepend">
               <span class="input-group-text"><i class="fas fa-key"></i></span>
             </div>
             <input type="password" class="form-control" formControlName="contrasenia">
-          </div>
+          </div> -->
           <!-- <div class="row align-items-center remember">
             <input type="checkbox">Remember Me
           </div> -->
-          <button type="submit" class="btn float-right login_btn" (click)="onSubmit()">Sign in</button>
+          <!-- <button type="submit" class="btn float-right login_btn" (click)="onSubmit()">Sign in</button> -->
+        <!-- </form> -->
+        <form name="loginForm" [formGroup]="loginForm">
+          <div class="input-group form-group">
+            <div class="input-group-prepend">
+              <span class="input-group-text"><i class="fas fa-user"></i></span>
+            </div>
+            <input type="text" class="form-control" formControlName="usuario">
+          </div>
+          <div class="input-group form-group">
+            <div class="input-group-prepend">
+              <span class="input-group-text"><i class="fas fa-key"></i></span>
+            </div>
+            <input type="password" class="form-control" formControlName="password">
+          </div>
+          <button type="submit" class="btn btn-warning float-right" (click)="onSubmit()">Ingresar</button>
         </form>
       </div>
       <!-- <div class="card-footer">

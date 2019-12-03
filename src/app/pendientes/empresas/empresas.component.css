@@ -1,0 +1,9 @@
+.list-group-item {
+  background: transparent;
+}
+
+.bg {
+  max-height: 50%;
+  min-height: 150px;
+  background: linear-gradient(rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0.8));
+}

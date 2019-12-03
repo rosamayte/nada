@@ -1,1 +1,11 @@
-<p>pendientes works!</p>
+<!-- <div *ngIf="this.tipo==='estudiante'">
+  <app-estudiante></app-estudiante>
+</div> -->
+
+<div class="mt-5" *ngIf="this.tipo==='empresas'">
+  <app-empresas></app-empresas>
+</div>
+
+<div *ngIf="this.tipo===null">
+  Error
+</div>

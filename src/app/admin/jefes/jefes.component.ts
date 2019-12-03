@@ -1,6 +1,11 @@
 import { Component, OnInit } from '@angular/core';
+import { FormGroup, FormBuilder, Validators } from '@angular/forms';
+
 import { Jefe } from 'src/app/models/jefe';
 import { Carrera } from 'src/app/models/carrera';
+import { AppService } from 'src/app/app.service';
+
+// tslint:disable: variable-name
 
 @Component({
   selector: 'app-jefes',
@@ -67,9 +72,26 @@ export class JefesComponent implements OnInit {
 
   public carreras: Array<Carrera> = this.carrerasMock;
 
-  constructor() { }
+  public formJefe: FormGroup;
+
+  constructor(
+    private _formBuilder: FormBuilder,
+    private _service: AppService
+  ) { }
 
   ngOnInit() {
+    this.formJefe = this._formBuilder.group({
+      usuario: ['', Validators.required],
+      nombre: ['', Validators.required],
+      password: ['', Validators.required],
+      carrera: ['', Validators.required]
+    });
+  }
+
+  public addJefe = () => {
+    const jf = this.formJefe.value;
+    console.log(jf);
+    this.jefes.push(new Jefe(jf.nombre, jf.carrera, jf.usuario, jf.password));
   }
 
 }
