@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 
+import { map } from 'rxjs/operators';
+
 // tslint:disable: variable-name
 
 @Component({
@@ -16,8 +18,11 @@ export class PendientesComponent implements OnInit {
   ) { }
 
   ngOnInit() {
-    const t = this._route.snapshot.paramMap.get('tipo');
-    this.tipo = t === 'estudiantes' || t === 'empresas' ? t : null;
+    this._route.url.subscribe(url => {
+      const t = `${url[1]}`;
+      this.tipo = t === 'estudiantes' || t === 'empresas' ? t : null;
+      // console.log(t);
+    });
   }
 
 }

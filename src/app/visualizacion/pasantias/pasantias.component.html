@@ -1,1 +1,27 @@
-<p>pasantias works!</p>
+
+<div class="row">
+  
+</div>
+
+<div class="row">
+  <div class="box" style="border: 5px dotted gray; position: static;">
+    <ul class="list-group list-group-flush">
+      <li class="list-group-item" *ngFor="let empresa of this.empresas; let i = index;">
+        <div class="card bg list-group-item">
+          <div class="row no-gutters">
+            <div class="col-4" style="max-height: 150px; max-width: 150px;">
+              <img src="assets/times-circle-512.png" class="card-img" style="max-height: 150px; max-width: 150px;">
+            </div>
+            <div class="col-8">
+              <div class="card-body">
+                <h5 class="card-title">{{empresa.nombre}}</h5>
+                <p class="card-text" align="justify">{{empresa.informacion}}</p>
+                <p class="card-text" *ngIf="empresa.pagina"><small class="text-muted">{{empresa.pagina}}</small></p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </li>
+    </ul>
+  </div>
+</div>

@@ -12,6 +12,7 @@ export class EmpresasComponent implements OnInit {
     {
       nombre: 'empresa ',
       password: 'asdzxc',
+      pagina: 'www.empresa1.com',
       informacion:
         `Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
       magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
