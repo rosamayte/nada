@@ -1,1 +1,7 @@
-<p>visualizacion works!</p>
+<div class="mt-5" *ngIf="this.tipo==='pasantias'">
+  <app-pasantias></app-pasantias>
+</div>
+
+<div class="mt-5" *ngIf="this.tipo==='pasantes'">
+  <app-pasantes></app-pasantes>
+</div>

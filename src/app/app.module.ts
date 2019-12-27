@@ -20,6 +20,8 @@ import { VisualizacionComponent } from './visualizacion/visualizacion.component'
 import { EmpresasComponent } from './pendientes/empresas/empresas.component';
 import { PasantesComponent } from './visualizacion/pasantes/pasantes.component';
 import { PasantiasComponent } from './visualizacion/pasantias/pasantias.component';
+import { FormulariosComponent } from './formularios/formularios.component';
+import { PerfilComponent } from './perfil/perfil.component';
 
 @NgModule({
   declarations: [
@@ -37,7 +39,9 @@ import { PasantiasComponent } from './visualizacion/pasantias/pasantias.componen
     VisualizacionComponent,
     EmpresasComponent,
     PasantesComponent,
-    PasantiasComponent
+    PasantiasComponent,
+    FormulariosComponent,
+    PerfilComponent
   ],
   imports: [
     BrowserModule,

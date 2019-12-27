@@ -1,5 +1,8 @@
 import { Injectable } from '@angular/core';
 import { Carrera } from './models/carrera';
+import { Usuario } from './models/usuario';
+import { Empresa } from './models/empresa';
+import { Estudiante } from './models/estudiante';
 
 @Injectable({
   providedIn: 'root'
@@ -7,78 +10,71 @@ import { Carrera } from './models/carrera';
 export class AppService {
 
   private empresas: Array<any> = [
-    {
-      nombre: 'empresa 1',
-      password: 'qweasdzxc',
-      pagina: 'empresa1.com',
-      informacion:
-        `Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
-         magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-         consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
-         Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.`
-    },
-    {
-      nombre: 'empresa 2',
-      password: 'qweasdzxc',
-      pagina: 'empresa2.com',
-      informacion:
-        `Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
-         magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-         consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
-         Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.`
-    },
-    {
-      nombre: 'empresa 3',
-      password: 'qweasdzxc',
-      pagina: 'empresa3.com',
-      informacion:
-        `Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
-         magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-         consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
-         Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.`
-    },
+    new Empresa(
+      'empresa 1',
+      'asdzxc',
+      `Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
+      magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+      consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+      Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.`,
+      'www.empresa1.com',
+    ),
+    new Empresa(
+      'empresa 2',
+      'asdzxc',
+      `Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
+      magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+      consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+      Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.`,
+      'www.empresa1.com',
+    ),
+    new Empresa(
+      'empresa 3',
+      'asdzxc',
+      `Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
+      magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+      consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+      Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.`,
+    ),
   ];
 
   private estudiantes: Array<any> = [
-    {
-      nombre: 'estudiante 1',
-      password: 'asdzxc',
-      correo: 'estu1@upb.com',
-      codigo: 12345,
-      carrera: 'Sistemas',
-      pagina: '',
-      informacion:
-        `Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
+    new Estudiante(
+      'estudiante 1',
+      'asdzxc',
+      `Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
          magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
          consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
-         Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.`
-    },
-    {
-      nombre: 'estudiante 2',
-      password: 'asdzxc',
-      correo: 'estu2@upb.com',
-      codigo: 98765,
-      carrera: 'Sistemas',
-      pagina: '',
-      informacion:
-        `Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
+         Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.`,
+      'estu1@upb.com',
+      'Sistemas',
+      5,
+      12345
+    ),
+    new Estudiante(
+      'estudiante 2',
+      'asdzxc',
+      `Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
          magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
          consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
-         Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.`
-    },
-    {
-      nombre: 'estudiante 3',
-      password: 'asdzxc',
-      correo: 'estu3@upb.com',
-      codigo: 2345,
-      carrera: 'Admin',
-      pagina: '',
-      informacion:
-        `Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
-         magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-         consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
-         Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.`
-    },
+         Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.`,
+      'estu2@upb.com',
+      'Sistemas',
+      7,
+      98765,
+    ),
+    new Estudiante(
+      'estudiante 3',
+      'asdzxc',
+      `Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
+      magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+      consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+      Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.`,
+      'estu3@upb.com',
+      'Admin',
+      3,
+      2345,
+    ),
   ];
 
   private carreras: Array<Carrera> = [
@@ -114,6 +110,25 @@ export class AppService {
     },
   ];
 
+  private perfilEm: Empresa = new Empresa(
+    'empresa1',
+    'qweasd',
+    `Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
+      magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+      consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+      Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.`
+  );
+
+  private perfilEs: Estudiante = new Estudiante(
+    'estudiante1',
+    'asdzxc',
+    'info text',
+    'mail@est.com',
+    'carrera1',
+    4,
+    9782
+  );
+
   constructor() { }
 
   public getEmpresas = (): Array<any> => this.empresas;
@@ -133,4 +148,8 @@ export class AppService {
   public getEmpresa = (index: number): any => this.empresas[index];
   public getEstudiante = (index: number): any => this.estudiantes[index];
   public getCarrera = (index: number): any => this.carreras[index];
+
+  public getPerfil = (): Empresa | Estudiante =>
+    this.perfilEm
+  // this.perfilEs
 }

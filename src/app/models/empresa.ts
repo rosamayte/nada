@@ -1,13 +1,19 @@
-export class Empresa {
-  public nombre: string;
-  public password: string;
-  public informacion: string;
-  public pagina?: string;
+import { Usuario } from './usuario';
+import { Anuncio } from './anuncio';
 
-  constructor(nombre: string, password: string, informacion: string, pagina?: string) {
-    this.nombre = nombre;
-    this.password = password;
-    this.informacion = informacion;
-    if (pagina) { this.pagina = pagina; }
+export class Empresa extends Usuario {
+
+  public anuncios: Array<Anuncio>;
+
+  constructor(
+    nombre: string,
+    password: string,
+    info: string,
+    pagina: string = '',
+    anuncios: Array<Anuncio> = []
+  ) {
+    super(nombre, password, info, pagina);
+    super.type = 'empresa';
+    this.anuncios = anuncios;
   }
 }

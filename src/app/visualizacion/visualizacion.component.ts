@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-visualizacion',
@@ -7,9 +8,18 @@ import { Component, OnInit } from '@angular/core';
 })
 export class VisualizacionComponent implements OnInit {
 
-  constructor() { }
+  public tipo: string;
+
+  constructor(
+    private _route: ActivatedRoute
+  ) { }
 
   ngOnInit() {
+    this._route.url.subscribe(url => {
+      const t = `${url[1]}`;
+      this.tipo = t === 'pasantias' || t === 'pasantes' ? t : null;
+      // console.log(t);
+    });
   }
 
 }
